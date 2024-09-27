@@ -51,6 +51,16 @@
             bindings = <&tog 1>;
             key-positions = <40 41>;
         };
+
+        COMBO_ESCAPE {
+            bindings = <&kp ESCAPE>;
+            key-positions = <13 14>;
+        };
+
+        toggle_ble_func_layer {
+            bindings = <&tog 6>;
+            key-positions = <34 35 36>;
+        };
     };
 
     macros {
@@ -78,10 +88,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R           &kp T                                                    &kp Y             &kp U    &kp I     &kp O     &kp P
-&kp A             &kp S         &kp D         &kp F           &kp G             &kp LS(LG(S))             &kp COMMA    &kp H             &kp J    &kp K     &kp L     &kp MINUS
-&kt Z             &kp X         &kp C         &kp V           &kp B             &kp TAB                   &kp PERIOD   &kp N             &lt 4 M  &mkp MB1  &mkp MB4  &kp RIGHT_SHIFT
-&kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &lt 2 LANGUAGE_2  &mt LEFT_CONTROL SPACE    &lt 4 ENTER  &lt 5 LANGUAGE_1                               &lt 4 DELETE
+&kp Q             &kp W         &kp E         &kp R           &kp T                                                    &kp Y             &kp U  &kp I     &kp O     &kp P
+&kp A             &kp S         &kp D         &kp F           &kp G             &kp LS(LG(S))             &kp COMMA    &kp H             &kp J  &kp K     &kp L     &lt 4 MINUS
+&kt Z             &kp X         &kp C         &kp V           &kp B             &kp TAB                   &kp PERIOD   &kp N             &kp M  &mkp MB1  &mkp MB4  &kp RIGHT_SHIFT
+&kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &lt 2 LANGUAGE_2  &mt LEFT_CONTROL SPACE    &lt 4 ENTER  &lt 5 LANGUAGE_1                             &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -89,21 +99,21 @@
 
         GAME {
             bindings = <
-&kp TAB         &kp Q   &kp W   &kp E   &kp R                                       &trans           &trans  &trans    &trans    &trans
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D   &kp F      &kp LS(LG(S))    &kp F           &trans           &trans  &trans    &trans    &trans
-&kp ESCAPE      &kp Z   &kp X   &kp C   &kp V      &kp M            &kp SPACE       &kp RIGHT_SHIFT  &mo 4   &mkp MB1  &mkp MB4  &trans
-&trans          &trans  &trans  &trans  &kp SPACE  &trans           &kp LEFT_ARROW  &kp RIGHT_ARROW                              &trans
+&kp TAB         &kp Q   &kp W   &kp E         &kp R                                       &trans           &trans         &trans    &trans    &trans
+&kp ESCAPE      &kp A   &kp S   &kp D         &kp F      &kp LS(LG(S))    &kp RS(COMMA)   &kp RS(PERIOD)   &kp PAGE_UP    &trans    &trans    &mo 4
+&kp LEFT_SHIFT  &kp Z   &kp X   &kp C         &kp V      &kp M            &kp SPACE       &kp F            &kp PAGE_DOWN  &mkp MB1  &mkp MB4  &trans
+&trans          &kp F3  &kp F4  &kp LEFT_ALT  &kp SPACE  &mo 0            &kp LEFT_ARROW  &kp RIGHT_ARROW                                     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         TRANSPORT {
             bindings = <
-&kp LC(Q)  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                                &kp F12          &kp HOME        &kp UP_ARROW    &kp END          &kp RIGHT_ALT
-&kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(G)  &trans       &kp LC(LS(TAB))  &kp BACKSPACE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(TAB)
-&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)  &kp LC(Y)    &trans           &trans           &trans          &trans          &trans           &trans
-&trans     &trans     &trans     &trans     &trans     &trans       &kp F4           &kp RIGHT_SHIFT                                                   &trans
+&kp LC(Q)  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                                &kp F12          &kp HOME            &kp UP_ARROW      &kp END              &kp RIGHT_ALT
+&kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(G)  &trans       &kp LC(LS(TAB))  &kp BACKSPACE    &kp LEFT_ARROW      &kp DOWN_ARROW    &kp RIGHT_ARROW      &kp LC(TAB)
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)  &kp LC(Y)    &trans           &kp RG(TAB)      &kp RG(LEFT_ARROW)  &kp RG(UP_ARROW)  &kp RG(RIGHT_ARROW)  &kp RG(DOWN_ARROW)
+&trans     &trans     &trans     &trans     &trans     &trans       &kp F4           &kp RIGHT_SHIFT                                                             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PG_UP) LC(PAGE_DOWN)>;
@@ -129,10 +139,10 @@
 
         NUM_AND_MARK {
             bindings = <
-&kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp GRAVE          &kp AMPERSAND                                   &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SLASH
-&kp LEFT_BRACE        &kp RIGHT_BRACE        &kp COLON       &kp DOUBLE_QUOTES  &kp COMMA       &trans              &kp COMMA   &kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-&kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SEMICOLON   &kp SINGLE_QUOTE   &kp PERIOD      &kp EQUAL           &kp PERIOD  &kp EQUAL     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0
-&kp LESS_THAN         &kp GREATER_THAN       &kp SLASH       &kp LEFT_SHIFT     &kp LEFT_SHIFT  &kp LEFT_CONTROL    &trans      &trans                                                  &kp PIPE
+&kp GRAVE      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp UNDERSCORE     &kp AMPERSAND                                                  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SLASH
+&kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &kp COMMA                &trans                    &kp COMMA   &kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
+&kp SEMICOLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE   &kp PERIOD               &kp EQUAL                 &kp PERIOD  &kp EQUAL     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0
+&kp LESS_THAN  &kp LESS_THAN         &kp GREATER_THAN       &kp LEFT_SHIFT     &mt LEFT_ALT LANGUAGE_2  &mt LEFT_CONTROL SPACE    &trans      &trans                                                  &kp PIPE
             >;
         };
 
