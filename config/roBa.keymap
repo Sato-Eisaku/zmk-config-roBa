@@ -18,22 +18,12 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <11 12>;
+            key-positions = <11 10>;
         };
 
         shift_tab {
             bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
-        };
-
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
+            key-positions = <12 11>;
         };
 
         eq {
@@ -53,12 +43,72 @@
 
         COMBO_ESCAPE {
             bindings = <&kp ESCAPE>;
-            key-positions = <13 14>;
+            key-positions = <0 1>;
         };
 
         toggle_ble_func_layer {
             bindings = <&tog 6>;
             key-positions = <34 35 36>;
+        };
+
+        COMBO_F1 {
+            bindings = <&kp F1>;
+            key-positions = <5 6>;
+        };
+
+        COMBO_F2 {
+            bindings = <&kp F2>;
+            key-positions = <6 7>;
+        };
+
+        COMBO_F3 {
+            bindings = <&kp F3>;
+            key-positions = <7 8>;
+        };
+
+        COMBO_F4 {
+            bindings = <&kp F4>;
+            key-positions = <9 8>;
+        };
+
+        COMBO_F5 {
+            bindings = <&kp F5>;
+            key-positions = <17 18>;
+        };
+
+        COMBO_F6 {
+            bindings = <&kp F6>;
+            key-positions = <18 19>;
+        };
+
+        COMBO_F7 {
+            bindings = <&kp F7>;
+            key-positions = <19 20>;
+        };
+
+        COMBO_F8 {
+            bindings = <&kp F8>;
+            key-positions = <20 21>;
+        };
+
+        COMBO_F9 {
+            bindings = <&kp F9>;
+            key-positions = <29 30>;
+        };
+
+        COMBO_F10 {
+            bindings = <&kp F10>;
+            key-positions = <30 31>;
+        };
+
+        COMBO_F11 {
+            bindings = <&kp F11>;
+            key-positions = <31 32>;
+        };
+
+        COMBO_F12 {
+            bindings = <&kp F12>;
+            key-positions = <32 33>;
         };
     };
 
@@ -93,7 +143,7 @@
 &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &lt 2 LANGUAGE_2  &mt LEFT_CONTROL SPACE    &mt RIGHT_SHIFT ENTER  &lt 5 LANGUAGE_1                             &kp DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         GAME {
@@ -140,7 +190,7 @@
             bindings = <
 &kp GRAVE      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp UNDERSCORE     &kp AMPERSAND                                                  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SLASH
 &kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &kp COMMA                &trans                    &kp COMMA   &kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-&kp SEMICOLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE   &kp PERIOD               &kp EQUAL                 &kp PERIOD  &kp EQUAL     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0
+&kp SEMICOLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE   &kp PERIOD               &kp BACKSLASH             &kp PERIOD  &kp EQUAL     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0
 &kp LESS_THAN  &kp LESS_THAN         &kp GREATER_THAN       &kp LEFT_SHIFT     &mt LEFT_ALT LANGUAGE_2  &mt LEFT_CONTROL SPACE    &trans      &trans                                                  &kp PIPE
             >;
         };
