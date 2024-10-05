@@ -140,7 +140,7 @@
             bindings = <
 &kp Q             &kp W         &kp E         &kp R           &kp T                                                              &kp Y             &kp U  &kp I     &kp O     &kp P
 &kp A             &kp S         &kp D         &kp F           &kp G             &kp LS(LG(S))             &kp COMMA              &kp H             &kp J  &kp K     &kp L     &lt 4 MINUS
-&kp Z             &kp X         &kp C         &kp V           &kp B             &kp TAB                   &kp PERIOD             &kp N             &kp M  &mkp MB1  &mkp MB4  &kp RIGHT_SHIFT
+&kp Z             &kp X         &kp C         &kp V           &kp B             &kp TAB                   &kp PERIOD             &kp N             &kp M  &mkp MB1  &mkp MB4  &tb_mo_scroll
 &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &lt 2 LANGUAGE_2  &mt LEFT_CONTROL SPACE    &mt RIGHT_SHIFT ENTER  &lt 5 LANGUAGE_1                             &kp DELETE
             >;
 
